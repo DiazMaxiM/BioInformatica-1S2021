@@ -1,0 +1,19 @@
+<html>
+
+<body>
+    <textarea id="texto">
+    </textarea>
+    <button onclick="resaltar();">Resaltar</button>
+    <div id="text">
+        <script>
+            function resaltar() {
+                const csLewisRepeat = document.getElementById("texto").value;
+                const repeatRegex = /TATA/g;
+
+                document.getElementById("text").innerHTML = csLewisRepeat.replace(new RegExp(repeatRegex, "gi"), (match) => `</mark>${match}<mark>`);
+            }
+        </script>
+
+</body>
+
+</html>
